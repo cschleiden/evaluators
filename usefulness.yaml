@@ -1,0 +1,21 @@
+llm:
+  name: usefulness
+  prompt: |-
+    Evaluate on a scale of 1-5, with 5 being best, how useful the given answer for the question, given the expected result.
+    Answer with just your rating.
+
+    Question:
+    {{prompt}}
+
+    Answer:
+    {{completion}}
+
+    Expected:
+    {{expected}}
+
+  choices:
+    - '1': 0.0
+    - '2': 0.25
+    - '3': 0.5
+    - '4': 0.75
+    - '5': 1.0
